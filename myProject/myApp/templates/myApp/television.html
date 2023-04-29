@@ -1,0 +1,651 @@
+<body>
+    <style>
+      
+  /* Basic Styling */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+  /* Columns */
+  .left-column {
+    width: 65%;
+    position: relative;
+  }
+   
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+  /* Product Description */
+  .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #01070e;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #01070e;
+    line-height: 24px;
+  }
+  /* Product Color */
+  .product-color {
+    margin-bottom: 30px;
+  }
+   
+  .color-choose div {
+    display: inline-block;
+  }
+   
+  .color-choose input[type="radio"] 
+  {
+    display: none;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+   
+  
+ 
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #01070e;
+  }
+   
+  .color-choose input[type="radio"]:checked + label span {
+    background-image: url(images/check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+   
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+   
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+   
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+   
+  .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+  .cable-config a:before {
+  content: "?";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+  }
+  */
+  /*buy now*/
+  .buy-now {
+    display: flex;
+    align-items: center;
+  }
+  /*add cart*/
+  .add-cart{
+    display: flex;
+    align-items: center;
+  }
+  /* Product Price */
+  .product-price {
+    display: flex;
+    align-items: bottom;
+  }
+   
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #01050c;
+    margin-right: 20px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: #64af3d;
+  }
+  /* Responsive */
+  @media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
+  </style>
+  </body>
+  
+  
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+          
+  <main class="container">
+   
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <div class="icons-container">
+        <div class="share-icon">
+          <img class="img" src="https://media.4rgos.it/i/Argos/8784672_R_Z001A?w=1500&h=880&qlt=70&fmt=webp" alt="" width="80%" 
+          height="20%">
+          
+          
+        </div>
+        <div class="product-price">
+          <span><h3>£149</h3></span></div>
+      <img data-image="blue" src="images/blue.png" alt="">
+      <img data-image="red" class="active" src="images/red.png" alt="">
+    </div>
+    </div>
+   
+   
+    <!-- Right Column -->
+    <div class="right-column">
+   
+      <!-- Product Description -->
+      <div class="product-description">
+        <span><h1></h1>Televisions</span>
+        <h1>LG 22 Inch 22TN410V Full HD LED TV Monitor</h1>
+        <p>This LG TV Monitor has dual-purpose combining a TV and Computer Monitor. HD resolution delivers lifelike picture quality with superb colour accuracy. From sitting or standing, you can enjoy the same excellent image projection.</p>
+        <p>Enjoy your movies or games with realistic stereo sound. With the built in stereo speaker, there is no need for extra speakers around your monitor..</p>
+        <p>Reducing the flicker level to almost zero, flicker-safe helps you protect your eyes from exhausting flickers. Work and entertain as long as you want!</p>
+        <p>Model number: 22TN410V-PZAEK.</p>
+        <p>2020 model.</p>
+        <h2>Dimensions and Weight</h2>
+        <ul>
+            <li>Screen size: 22 inches.</li>
+                <li>Size of TV H31.65, W50.76, D5.27cm.</li>
+                <li>Size of TV with stand: H35.8, W50.76, D14.63cm.</li>
+                <li>Width of TV stand 29.3cm.</li>
+                <li>Suitable for wall mounting 75 x 75 bracket.</li>
+                <li>Length of cable: 1m.</li>
+                <li>Packaged size H12.6, W66, D38cm.</li>
+                <li>Packaged weight 4.2kg</li>
+                
+        </ul>
+        <h2>Screen Technology</h2>
+        <ul>
+                <li>LED TV Screen.</li>
+                <li>Full HD (1080p) display resolution.</li>
+                <li>HDR - makes whites brighter, intensifies colour and enhances the overall picture for an epic cinematic effect.</li>
+                <li>Motion rate 60Hz.</li>
+                <li>Viewing angle 178/178 degrees.</li>
+                <li>Resolution 1920 x 1080 pixels.</li>
+        </ul>
+        <h2>Sound Technology</h2>
+        <ul>
+                <li>2 channel sound system.</li>
+                <li>2 x 5 watt RMS power output.</li>
+                
+        </ul>
+        <h2>Other features</h2>
+        <ul>
+            <li>Features USB video playback.</li>
+            <li>CI plus slot.</li>
+            <li>Sleep timer.</li>
+            <li>Parental controls.</li>
+            <li> Aerial required.</li>
+            <li>Manufacturer's 1 year guarantee.</li>
+             <li>EAN: 8806098725977.</li>
+            
+    </ul>
+        
+        <ul class="features">
+            <li><i class="fa-solid fa-circle-check"></i>Supported Features</li>
+  
+        </ul></p>
+      </div>
+   
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+   
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+   
+          <div class="color-choose">
+            
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
+            
+          </div>
+   
+        </div>
+   
+        <!-- Cable Configuration -->
+<div class="cable-config">
+          
+   
+          <a href="#">How to configurate your Televisions</a>
+        </div>
+      </div>
+   <!--buy now-->
+   <div class="buy-now">
+  
+    <a href="#" class="cart-btn">Buy Now</a>
+    <a href="#" class="cart-btn">Add to cart</a>
+  </div>
+  </div>
+      <!-- Product Pricing -->
+      
+        <div class="add-cart">
+      </div>
+    
+  </main>    </script>
+    </body>
+  </html><body>
+    <style>
+      
+  /* Basic Styling */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+  /* Columns */
+  .left-column {
+    width: 65%;
+    position: relative;
+  }
+   
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+  /* Product Description */
+  .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #01070e;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #01070e;
+    line-height: 24px;
+  }
+  /* Product Color */
+  .product-color {
+    margin-bottom: 30px;
+  }
+   
+  .color-choose div {
+    display: inline-block;
+  }
+   
+  .color-choose input[type="radio"] 
+  {
+    display: none;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+   
+  
+ 
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #01070e;
+  }
+   
+  .color-choose input[type="radio"]:checked + label span {
+    background-image: url(images/check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+   
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+   
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+   
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+   
+  .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+  .cable-config a:before {
+  content: "?";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+  }
+  */
+  /*buy now*/
+  .buy-now {
+    display: flex;
+    align-items: center;
+  }
+  /*add cart*/
+  .add-cart{
+    display: flex;
+    align-items: center;
+  }
+  /* Product Price */
+  .product-price {
+    display: flex;
+    align-items: bottom;
+  }
+   
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #01050c;
+    margin-right: 20px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: #64af3d;
+  }
+  /* Responsive */
+  @media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
+  </style>
+  </body>
+  
+  
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+          
+  <main class="container">
+   
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+      <div class="icons-container">
+        <div class="share-icon">
+          <img class="img" src="https://media.4rgos.it/i/Argos/8784672_R_Z001A?w=1500&h=880&qlt=70&fmt=webp" alt="" width="80%" 
+          height="20%">
+          
+          
+        </div>
+        <div class="product-price">
+          <span><h3>£149</h3></span></div>
+      <img data-image="blue" src="images/blue.png" alt="">
+      <img data-image="red" class="active" src="images/red.png" alt="">
+    </div>
+    </div>
+   
+   
+    <!-- Right Column -->
+    <div class="right-column">
+   
+      <!-- Product Description -->
+      <div class="product-description">
+        <span><h1></h1>Televisions</span>
+        <h1>LG 22 Inch 22TN410V Full HD LED TV Monitor</h1>
+        <p>This LG TV Monitor has dual-purpose combining a TV and Computer Monitor. HD resolution delivers lifelike picture quality with superb colour accuracy. From sitting or standing, you can enjoy the same excellent image projection.</p>
+        <p>Enjoy your movies or games with realistic stereo sound. With the built in stereo speaker, there is no need for extra speakers around your monitor..</p>
+        <p>Reducing the flicker level to almost zero, flicker-safe helps you protect your eyes from exhausting flickers. Work and entertain as long as you want!</p>
+        <p>Model number: 22TN410V-PZAEK.</p>
+        <p>2020 model.</p>
+        <h2>Dimensions and Weight</h2>
+        <ul>
+            <li>Screen size: 22 inches.</li>
+                <li>Size of TV H31.65, W50.76, D5.27cm.</li>
+                <li>Size of TV with stand: H35.8, W50.76, D14.63cm.</li>
+                <li>Width of TV stand 29.3cm.</li>
+                <li>Suitable for wall mounting 75 x 75 bracket.</li>
+                <li>Length of cable: 1m.</li>
+                <li>Packaged size H12.6, W66, D38cm.</li>
+                <li>Packaged weight 4.2kg</li>
+                
+        </ul>
+        <h2>Screen Technology</h2>
+        <ul>
+                <li>LED TV Screen.</li>
+                <li>Full HD (1080p) display resolution.</li>
+                <li>HDR - makes whites brighter, intensifies colour and enhances the overall picture for an epic cinematic effect.</li>
+                <li>Motion rate 60Hz.</li>
+                <li>Viewing angle 178/178 degrees.</li>
+                <li>Resolution 1920 x 1080 pixels.</li>
+        </ul>
+        <h2>Sound Technology</h2>
+        <ul>
+                <li>2 channel sound system.</li>
+                <li>2 x 5 watt RMS power output.</li>
+                
+        </ul>
+        <h2>Other features</h2>
+        <ul>
+            <li>Features USB video playback.</li>
+            <li>CI plus slot.</li>
+            <li>Sleep timer.</li>
+            <li>Parental controls.</li>
+            <li> Aerial required.</li>
+            <li>Manufacturer's 1 year guarantee.</li>
+             <li>EAN: 8806098725977.</li>
+            
+    </ul>
+        
+        <ul class="features">
+            <li><i class="fa-solid fa-circle-check"></i>Supported Features</li>
+  
+        </ul></p>
+      </div>
+   
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+   
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+   
+          <div class="color-choose">
+            
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
+            
+          </div>
+   
+        </div>
+   
+        <!-- Cable Configuration -->
+<div class="cable-config">
+          
+   
+          <a href="#">How to configurate your Televisions</a>
+        </div>
+      </div>
+   <!--buy now-->
+   <div class="buy-now">
+  
+    <a href="#" class="cart-btn">Buy Now</a>
+    <a href="#" class="cart-btn">Add to cart</a>
+  </div>
+  </div>
+      <!-- Product Pricing -->
+      
+        <div class="add-cart">
+      </div>
+    
+  </main>    </script>
+    </body>
+  </html>

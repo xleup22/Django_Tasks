@@ -1,0 +1,321 @@
+<body>
+    <style>
+      
+  /* Basic Styling */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+   
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+  /* Columns */
+  .left-column {
+    width: 65%;
+    position: relative;
+  }
+   
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+  /* Product Description */
+  .product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #04090e;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #04090e;
+    line-height: 24px;
+  }
+  .product-description h2 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #04090e;
+    letter-spacing: -2px;
+  }
+  
+  /* Product Color */
+  .product-color {
+    margin-bottom: 30px;
+  }
+   
+  .color-choose div {
+    display: inline-block;
+  }
+   
+  .color-choose input[type="radio"] 
+  {
+    display: none;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+   
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #C91524;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #314780;
+  }
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #053f1b;
+  }
+   
+  .color-choose input[type="radio"]:checked + label span {
+    background-image: url(images/check-icn.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+   
+  .cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #010811;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+  }
+   
+  .cable-choose button:hover,
+  .cable-choose button:active,
+  .cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+  }
+   
+  .cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+   
+  .cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+  }
+  .cable-config a:before {
+  content: "?";
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+  }
+  */
+  /*buy now*/
+  .buy-now {
+    display: flex;
+    align-items: center;
+  }
+  /*add cart*/
+  
+  /* Product Price */
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+   
+  .product-price span {
+    font-size: 25px;
+    font-weight: 300;
+    color: #04090e;
+    margin-right: 50px;
+  }
+   
+  .cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+  }
+  .cart-btn:hover {
+    background-color: #64af3d;
+  }
+  /* Responsive */
+  @media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+   
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+   
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+   
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
+  </style>
+  </body>
+  
+  
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+          
+  <main class="container">
+   
+    <!-- Left Column / smartphone Image -->
+    <div class="left-column">
+      <div class="icons-container">
+        <div class="share-icon">
+          <img class="img" src="https://www.backmarket.co.uk/cdn-cgi/image/format%3Dauto%2Cquality%3D75%2Cwidth%3D640/https://d1eh9yux7w8iql.cloudfront.net/product_images/None_ec1d3601-f893-4c07-a178-73e60ccf3625.jpg" alt="" width="80%" height="20%">
+        </div>
+        <div class="product-price">
+          <span><h3>£799<br></h3></span></div>
+      <img data-image="blue" src="images/blue.png" alt="">
+      <img data-image="red" class="active" src="images/red.png" alt="">
+    </div>
+    </div>
+   
+   
+    <!-- Right Column -->
+    <div class="right-column">
+   
+      <!-- Product Description -->
+      <div class="product-description">
+        <span><h1></h1>Smartphone</span>
+        <h1>iPhone 13 Pro 128GB</h1>
+        <p>Your new superpower. All-out standout. The iPhone 13 features the most advanced dual-camera system ever on an iPhone. The colourful, sharper and brighter 6.1-inch Super Retina XDR display and durable flat-edge design with Ceramic Shield. A15 Bionic chip, the world's fastest smartphone chip for lightning-fast performance. A big leap in battery life..</p>
+        <p>The iOS 15 packs new features to do more with iPhone than ever before. 5G for superfast downloads and high-quality streaming for up to 19 hours of video playback. Supports MagSafe accessories for easy attach and faster wireless charging.</p>
+        <h2>Display and Design</h2>
+        <ul>
+            <li>6.1 inch OLED display.</li>
+                <li>Resolution 2532 x 1170 pixels.</li>
+                <li> With a density of 460 pixels per inch.</li>
+                <li> Touch screen.</li>
+                <li>Toughened glass.</li>
+        </ul>
+        <h2>Camera</h2>
+        <p>The iPhone 13 and 13 mini have a dual-camera system with a 12MP ultra-wide and wide lens. The iPhone 13 Pro and Pro Max have a triple-camera system with a 12MP ultra-wide, wide, and telephoto lens, as well as a LiDAR scanner for improved autofocus and AR experiences. All models have Night mode, Deep Fusion, and Smart HDR 4 for better low-light photography.</p>
+        <h2>Performance</h2>
+        <p>The iPhone 13 is powered by Apple's A15 Bionic chip, which is said to be the fastest chip ever in a smartphone. It has 5G connectivity for faster internet speeds and improved performance. It also has improved battery life, with the iPhone 13 mini lasting up to 1.5 hours longer than the iPhone 12 mini, and the iPhone 13 Pro Max lasting up to 2.5 hours longer than the iPhone 12 Pro Max.</p>
+        <h2>Other features</h2>
+        <p>The iPhone 13 runs on iOS 15, which comes with new features such as Focus modes, Live Text, and FaceTime improvements. It also has MagSafe technology for improved wireless charging and accessories. It comes in new colors such as Pink and Sierra Blue, as well as traditional colors like Gold and Silver.</p>
+        <h2>Price and availability</h2>
+        <p>The iPhone 13 starts at £799 for the iPhone 13 mini, £999 for the iPhone 13, £1,099 for the iPhone 13 Pro, and £1,199 for the iPhone 13 Pro Max. It is now available for pre-order and will be released on September 24, 2021.</p>
+        <ul class="features">
+            <li><i class="fa-solid fa-circle-check"></i>Supported Features</li>
+  
+        </ul></p>
+      </div>
+   
+      <!-- Product Configuration -->
+      <div class="product-configuration">
+   
+        <!-- Product Color -->
+        <div class="product-color">
+          <span>Color</span>
+   
+          <div class="color-choose">
+            <div>
+              <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+              <label for="red"><span></span></label>
+            </div>
+            <div>
+              <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+              <label for="blue"><span></span></label>
+            </div>
+            <div>
+              <input data-image="black" type="radio" id="black" name="color" value="black">
+              <label for="black"><span></span></label>
+            </div>
+      
+          </div>
+   
+        </div>
+   
+        <!-- Cable Configuration -->
+        <div class="cable-config">
+          <span>Storage</span>
+   
+          <div class="cable-choose">
+            <button>128GB</button>
+            <button>256GB</button>
+            <button>512GB</button>
+            <button>1000GB</button>
+          </div>
+   
+          <a href="#">How to configurate your Smartphones</a>
+        </div>
+      </div>
+   <!--buy now-->
+   <div class="buy-now">
+  
+    <p><a href="#" class="cart-btn">Buy Now</a>
+      <a href="#" class="cart-btn">Add to cart</a>
+    </p>
+    </div>
+  </div>
+      <!-- Product Pricing -->
+      
+        <div class="add-cart">
+       
+      </div>
+    
+  </main>    </script>
+    </body>
+  </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {  
+background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-6469387_960_720.jpg");  
+margin-left:100px;  
+}  
+        
+header .header{
+  background-color: #fff;
+  height: 45px;
+  
+}
+ 
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.login-page .form .login{
+  margin-top: -31px;
+margin-bottom: 26px;
+font-weight:bold; 
+
+font-style: italic; 
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color:red;
+  
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #050505;
+  font-size: 12px;
+}
+.form .message a {
+  color: #f70505;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+
+    </style>
+<head>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>LOGIN</h3>
+            <p>Please enter your credentials to login.</p>
+          </div>
+        </div>
+        <form class="login-form">
+          <input type="text" placeholder="Email"/>
+          <input type="password" placeholder="Password"/>
+          <button>login</button>
+          <p class="message">Not registered? 
+          <nav>
+            <a href="http://127.0.0.1:8000/reg">Create an account</a></p>
+          </nav>
+          <div class="border-top pt-3">
+            <small class="text-muted">Forgot password?<a class="ml-2" href="http://127.0.0.1:8000/password">Reset it</a></small>
+        </div>
+        </form>
+      </div>
+    </div>
+</body>
+</body>
+</html>
