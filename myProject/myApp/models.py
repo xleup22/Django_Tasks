@@ -27,4 +27,18 @@ class enquiry(models.Model):
 
 	def __str__(self):
          return self.FirstName
-	
+
+class Review(models.Model):
+    description = models.TextField()
+    date = models.DateField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.description
+
+    # def edit(self, new_description):
+    #     self.description = new_description
+    #     self.save()
+
+    # def delete(self):
+    #     super().delete()

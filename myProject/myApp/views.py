@@ -6,6 +6,12 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
  
 from django.template import loader
+
+from .models import Review
+from django.shortcuts import render, redirect
+from django.views import View
+from django.views.generic.edit import UpdateView
+from django.urls import reverse_lazy
  
 # Create your views here.
 def home(request):
@@ -34,6 +40,7 @@ def product2(request):
         return render(request, 'myApp/product2.html')
 def product3(request):
         return render(request, 'myApp/product3.html')
+
 def reg(request):
             if request.method == 'POST':
              if request.POST.get('FirstName') and request.POST.get('LastName'):
@@ -77,8 +84,8 @@ def signin(request):
                 user = authenticate(request, username=username, password=password)
                 if user is not None: 
                        login(request,user)
-                       return redirect('home')
-                #        return render(request, 'myApp/profile.html')
+                #        return redirect('home')
+                       return render(request, 'myApp/profile.html')
                                             
                 else:
                        messages.error(request, "Bad credentials!")
@@ -88,14 +95,32 @@ def signin(request):
 
            
 
+class ReviewView(View):
+    def get(self, request):
+        reviews = Review.objects.all()
+        context = {'reviews': reviews}
+        return render(request, 'myApp/review.html', context)
 
-            
+    def post(self, request):
+        description = request.POST.get('description')
+        user=request.user
+        review = Review(description=description, user=user)
+        review.save()
 
+        return render(request,'myApp/product1.html')
 
-       
+class ReviewUpdateView(UpdateView):
+    model = Review
+    template_name = 'myApp/edit_review.html'
+    fields = ['description']
 
-               
-        
+    def get_success_url(self):
+        return reverse_lazy('myApp-review')
 
+class DeleteReviewView(View):
+    def post(self, request, pk):
 
+        review = Review.objects.get(id=pk)
+        review.delete()
 
+        return redirect('/product1')
